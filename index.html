@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperio - Premium Electronics & Gadgets</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- FLOOD RELIEF ALERT -->
+    <div class="flood-alert" id="floodAlert">
+        <div class="container">
+            <div class="flood-alert-content">
+                <div class="flood-alert-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <div class="flood-alert-text">
+                    <span class="flood-alert-highlight">IMPORTANT NOTICE:</span> 10% of every purchase will be donated to Sri Lanka Flood Relief Fund to help affected families. 
+                    <span class="flood-alert-highlight">Your purchase makes a difference!</span>
+                </div>
+                <button class="close-alert" id="closeAlert">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo" onclick="showPage('home')">
+                <div class="logo-icon">I</div>
+                <span>Imperio</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#" class="nav-link" onclick="showPage('home')">Home</a>
+                <a href="#" class="nav-link" onclick="showPage('products')">Products</a>
+                <a href="#" class="nav-link" onclick="showPage('categories')">Categories</a>
+                <a href="#" class="nav-link" onclick="showPage('about')">About Us</a>
+                <a href="#" class="nav-link" onclick="showPage('contact')">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="action-btn" id="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="action-btn" id="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active fade-in">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>Welcome to <span style="background: linear-gradient(to right, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Imperio</span></h1>
+                <p>Discover the latest in technology with premium electronics, unbeatable prices, and exceptional service.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary" onclick="showPage('products')">Shop Now <i class="fas fa-arrow-right"></i></a>
+                    <a href="#" class="btn btn-outline" onclick="showPage('about')">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FLOOD RELIEF BANNER -->
+        <section class="flood-relief-banner">
+            <div class="container flood-relief-content">
+                <div class="flood-relief-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h2 class="flood-relief-title">Stand with Sri Lanka</h2>
+                <p class="flood-relief-message">
+                    In response to the devastating floods affecting our nation, Imperio has pledged to donate 
+                    <span style="color: #fbbf24; font-weight: 700;">10% of EVERY purchase</span> 
+                    to the Sri Lanka Flood Relief Fund.
+                </p>
+                <div class="flood-relief-highlight">
+                    <i class="fas fa-heart" style="color: #fbbf24; margin-right: 0.5rem;"></i>
+                    Your purchase helps provide food, shelter, and medical aid to affected families
+                </div>
+                <p class="flood-relief-message">
+                    Together, we can make a difference. Shop with purpose - every order counts!
+                </p>
+            </div>
+        </section>
+
+        <!-- FEATURES 
+         -->
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Choose Imperio?</h2>
+                    <p>We're committed to providing the best shopping experience with premium products and exceptional service.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Secure Payments</h3>
+                        <p>Your payments are safe with our encrypted transaction system</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3>Fast Delivery</h3>
+                        <p>Free shipping on orders over $50 and express delivery options</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Our support team is always here to help you with any questions</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Social Responsibility</h3>
+                        <p>10% of every purchase goes to Sri Lanka Flood Relief Fund</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS PREVIEW -->
+        <section class="products">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Featured Products</h2>
+                    <p>Check out our most popular and trending products</p>
+                </div>
+                <div class="products-grid" id="home-products">
+                    <!-- products inserted here -->
+                </div>
+                <div class="text-center mt-2">
+                    <a href="#" class="btn btn-primary" onclick="showPage('products')">View All Products</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- PRODUCTS PAGE -->
+    <div id="products" class="page fade-in">
+        <div class="container page-container">
+            <div class="products-header">
+                <div class="section-title" style="text-align: left; margin-bottom: 0;">
+                    <h2>Our Products</h2>
+                    <p>Discover our wide range of premium electronics</p>
+                </div>
+                <div class="filter-controls">
+                    <select class="filter-select" id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="smartphones">Smartphones</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="audio">Audio</option>
+                        <option value="tablets">Tablets</option>
+                        <option value="wearables">Wearables</option>
+                        <option value="cameras">Cameras</option>
+                        <option value="gaming">Gaming</option>
+                        <option value="accessories">Accessories</option>
+                    </select>
+                    <select class="filter-select" id="sort-by">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Top Rated</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
+            </div>
+            <div class="products-grid" id="products-grid">
+                <!-- products inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CATEGORIES PAGE -->
+    <div id="categories" class="page fade-in">
+        <div class="container page-container">
+            <div class="section-title">
+                <h2>Product Categories</h2>
+                <p>Browse our products by category</p>
+            </div>
+            <div class="categories-grid">
+                <a href="#" class="category-card" onclick="filterByCategory('smartphones')">
+                    <div class="category-content">
+                        <div class="category-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Smartphones</h3>
+                    </div>
+                </a>
+                <a href="#" class="category-card" onclick="filterByCategory('laptops')">
+                    <div class="category-content">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>Laptops</h3>
+                    </div>
+                </a>
+
+
+
+
+
+
+
+
+
+
+                <a href="#" class="category-card" onclick="filterByCategory('audio')">
+                    <div class="category-content">
+                        <div class="category-icon">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <h3>Audio</h3>
+                    </div>
+                </a>
+                <a href="#" class="category-card" onclick="filterByCategory('tablets')">
+                    <div class="category-content">
+                        <div class="category-icon">
+                            <i class="fas fa-tablet-alt"></i>
+                        </div>
+                        <h3>Tablets</h3>
+                    </div>
+
+
+
+
+
+
+
+                </a>
+                <a href="#" class="category-card" onclick="filterByCategory('wearables')">
+                    <div class="category-content">
+                        <div class="category-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Wearables</h3>
+                    </div>
+                </a>
+                <a href="#" class="category-card" onclick="filterByCategory('cameras')">
+                    <div class="category-content">
+                        <div class="category-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>Cameras</h3>
+                    </div>
+                </a>
+                <a href="#" class="category-card" onclick="filterByCategory('gaming')">
+                    <div class="category-content">
+                        <div class="category-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3>Gaming</h3>
+                    </div>
+                </a>
+                <a href="#" class="category-card" onclick="filterByCategory('accessories')">
+                    <div class="category-content">
+                        <div class="category-icon">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                        <h3>Accessories</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="about" class="page fade-in">
+        <div class="about-container page-container">
+            <div class="about-hero">
+                <h1>About Imperio</h1>
+                <p>Your trusted partner for premium electronics and exceptional service</p>
+            </div>
+            
+            <div class="about-content">
+                <div>
+                    <img src="/profile.png" alt="Sandanindu Batheegama" class="owner-photo">
+                </div>
+                
+                <div class="owner-info">
+                    <h2 class="owner-name">Sandanindu Batheegama</h2>
+                    <p class="owner-title">Founder & CEO</p>
+                    
+                    <p>Welcome to Imperio, your premier destination for cutting-edge electronics and technology. Founded by Sandanindu Batheegama, Imperio was born from a passion for technology and a vision to make premium electronics accessible to everyone.</p>
+                    
+                    <p>With years of experience in the tech industry, Sandanindu has carefully curated a selection of products that combine innovation, quality, and value. Our mission is to provide our customers with not just products, but solutions that enhance their daily lives.</p>
+                    <!-- Add this inside the .owner-info div, after the contact-info section --> 
+<div class="social-profiles">
+    <h3>Connect with Me</h3>
+    <div class="social-profile-links">
+        <a href="https://lk.linkedin.com/in/sandanindu-batheegama-082008266" target="_blank" class="social-profile-link linkedin">
+            <div class="social-profile-icon">
+                <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="social-profile-info">
+                <div class="social-profile-name">LinkedIn</div>
+                <div class="social-profile-handle">@sandanindu-batheegama</div>
+            </div>
+            <div class="social-profile-arrow">
+                <i class="fas fa-external-link-alt"></i>
+            </div>
+        </a>
+        
+        <a href="https://youtube.com/@sandanindu" target="_blank" class="social-profile-link youtube">
+            <div class="social-profile-icon">
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div class="social-profile-info">
+                <div class="social-profile-name">YouTube</div>
+                <div class="social-profile-handle">@sandanindu</div>
+            </div>
+            <div class="social-profile-arrow">
+                <i class="fas fa-external-link-alt"></i>
+            </div>
+        </a>
+    </div>
+    <style>/* Social Profiles Styling */
+        .social-profiles {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        .social-profiles h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .social-profiles h3 i {
+            color: var(--primary);
+        }
+        
+        .social-profile-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .social-profile-link {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: var(--gray-50);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+        
+        .social-profile-link:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            background-color: var(--light);
+            border-color: var(--gray-200);
+        }
+        
+        .social-profile-link.linkedin:hover {
+            border-left: 4px solid #0077b5;
+        }
+        
+        .social-profile-link.youtube:hover {
+            border-left: 4px solid #ff0000;
+        }
+        
+        .social-profile-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+            font-size: 1.25rem;
+        }
+        
+        .social-profile-link.linkedin .social-profile-icon {
+            background-color: rgba(0, 119, 181, 0.1);
+            color: #0077b5;
+        }
+        
+        .social-profile-link.youtube .social-profile-icon {
+            background-color: rgba(255, 0, 0, 0.1);
+            color: #ff0000;
+        }
+        
+        .social-profile-info {
+            flex: 1;
+        }
+        
+        .social-profile-name {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.25rem;
+        }
+        
+        .social-profile-handle {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+        
+        .social-profile-arrow {
+            color: var(--gray-400);
+            font-size: 0.875rem;
+        }
+        
+        .social-profile-link:hover .social-profile-arrow {
+            color: var(--primary);
+        }
+        
+        /* Dark mode adjustments */
+        .dark-mode .social-profile-link {
+            background-color: var(--gray-100);
+            border-color: var(--gray-200);
+        }
+        
+
+
+
+
+
+
+
+        .dark-mode .social-profile-link:hover {
+            background-color: var(--gray-50);
+            border-color: var(--gray-300);
+        }
+        
+        .dark-mode .social-profile-name {
+            color: var(--gray-900);
+        }
+        
+        .dark-mode .social-profile-handle {
+            color: var(--gray-400);
+        }
+        
+
+
+
+
+
+
+
+
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .social-profile-icon {
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1rem;
+                margin-right: 0.75rem;
+            }
+            
+            .social-profile-name {
+                font-size: 0.875rem;
+            }
+            
+            .social-profile-handle {
+                font-size: 0.75rem;
+            }
+        }</style>
+</div>
+
+
+
+
+
+                    <div class="flood-relief-about">
+                        <h3><i class="fas fa-hands-helping" style="color: #1e40af;"></i> Our Commitment to Sri Lanka</h3>
+                        <p>In light of the recent devastating floods affecting our beautiful country, we have made a firm commitment: <strong>10% of every single purchase</strong> on our platform will be donated to the Sri Lanka Flood Relief Fund.</p>
+                        <p>This initiative is our way of standing in solidarity with our fellow Sri Lankans who have lost homes, belongings, and loved ones. We believe that businesses have a responsibility to support their communities in times of crisis.</p>
+                        <p>Your purchase doesn't just get you premium electronics - it helps provide:</p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li>Emergency food supplies</li>
+                            <li>Clean drinking water</li>
+                            <li>Medical assistance</li>
+                            <li>Temporary shelter</li>
+                            <li>Rebuilding support</li>
+                        </ul>
+                        <p style="margin-top: 1rem; font-weight: 600; color: #1e40af;">
+                            <i class="fas fa-heart" style="margin-right: 0.5rem;"></i>
+                            Shop with purpose. Your purchase makes a real difference.
+                        </p>
+                    </div>
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <strong>Phone:</strong> +94 74 135 4458
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <strong>Email:</strong> sandanindu@gmail.com
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <strong>Location:</strong> Galle, Sri Lanka
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="contact" class="page fade-in">
+        <div class="container page-container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team for any inquiries or support</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>+94 74 135 4458</p>
+                    <p>Available 24/7 for customer support</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>sandanindu@gmail.com</p>
+                    <p>We'll respond within 24 hours</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>113/A, Wiskam Road, Galle</p>
+                    <p>Sri Lanka</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Order Support</h3>
+                    <p>Instant order processing</p>
+                    <p>Track your orders easily</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHECKOUT PAGE -->
+    <div id="checkout" class="page fade-in">
+        <div class="checkout-container page-container">
+            <h1 class="text-center mb-2">Checkout</h1>
+            
+            <div class="checkout-grid">
+                <div class="checkout-form">
+                    <form id="checkout-form">
+                        <div class="form-section">
+                            <h3 class="form-section-title">Personal Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">First Name *</label>
+                                    <input type="text" id="first-name" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Last Name *</label>
+                                    <input type="text" id="last-name" class="form-input" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" class="form-input" required>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone-1">Primary Phone Number *</label>
+                                    <input type="tel" id="phone-1" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone-2">Secondary Phone Number</label>
+                                    <input type="tel" id="phone-2" class="form-input">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3 class="form-section-title">Shipping Address</h3>
+                            <div class="form-group">
+                                <label for="house-name">House Name/Number *</label>
+                                <input type="text" id="house-name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="street">Street Name *</label>
+                                <input type="text" id="street" class="form-input" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="district">District *</label>
+                                    <input type="text" id="district" class="form-input" required>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="province">Province *</label>
+                                    <input type="text" id="province" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Country</label>
+                                    <input type="text" id="country" class="form-input" value="Sri Lanka" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3 class="form-section-title">Payment Method</h3>
+                            <div class="payment-options">
+                                <div class="payment-option">
+                                    <input type="radio" id="cash-on-delivery" name="payment-method" value="cash-on-delivery" class="payment-radio" checked>
+                                    <label for="cash-on-delivery" class="payment-label">
+                                        <div class="payment-icon">
+                                            <i class="fas fa-money-bill-wave"></i>
+                                        </div>
+                                        <div>Cash on Delivery</div>
+                                    </label>
+
+
+
+
+
+
+
+
+
+
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" id="bank-deposit" name="payment-method" value="bank-deposit" class="payment-radio">
+                                    <label for="bank-deposit" class="payment-label">
+                                        <div class="payment-icon">
+                                            <i class="fas fa-university"></i>
+                                        </div>
+                                        <div>Bank Deposit</div>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="bank-details" id="bank-details">
+                                <div class="bank-info">
+                                    <h4>Bank Account Details</h4>
+                                    <p><strong>Bank:</strong> Commercial Bank</p>
+                                    <p><strong>Account Holder:</strong> Sandanindu Batheegama</p>
+                                    <p><strong>Account Number:</strong> 1234567890</p>
+                                    <p><strong>Branch:</strong> Galle</p>
+                                </div>
+
+
+
+
+
+
+
+
+
+                                <p class="disclaimer">Please deposit the total amount to the above account. After payment, email the deposit slip to support@imperio.com</p>
+                                
+                                <div class="form-group">
+                                    <label for="account-holder">Account Holder Name</label>
+                                    <input type="text" id="account-holder" class="form-input" value="Sandanindu Batheegama" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="account-number">Account Number</label>
+                                    <input type="text" id="account-number" class="form-input" value="1234567890" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bank-name">Bank Name</label>
+                                    <input type="text" id="bank-name" class="form-input" value="Commercial Bank" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="branch">Branch Name</label>
+                                    <input type="text" id="branch" class="form-input" value="Galle" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+
+
+
+                        <div class="disclaimer">
+                            <p><small>By proceeding with checkout, you agree to our terms and conditions. Your order will be processed and delivered within 3-5 business days.</small></p>
+                            <p><small style="color: #1e40af; font-weight: 600;">
+                                <i class="fas fa-hands-helping"></i> 
+                                <strong>NOTE:</strong> 10% of your order total will be donated to the Sri Lanka Flood Relief Fund. Thank you for making a difference!
+                            </small></p>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.125rem;">
+                            <i class="fas fa-check-circle"></i> Complete Order
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="checkout-summary">
+                    <h3 class="form-section-title">Order Summary</h3>
+                    <div id="checkout-items">
+                        <!-- order items inserted here -->
+                    </div>
+
+
+
+
+
+
+
+                    
+                    <!-- CHECKOUT DONATION SUMMARY -->
+                    <div class="checkout-donation" id="checkout-donation">
+                        <div class="checkout-donation-title">
+                            <i class="fas fa-hands-helping"></i>
+                            Flood Relief Donation
+                        </div>
+                        <div>10% of your order will be donated:</div>
+                        <div class="checkout-donation-amount" id="checkout-donation-amount">$0.00</div>
+                        <div style="font-size: 0.875rem; margin-top: 0.5rem; color: #1e40af;">
+                            <i class="fas fa-heart"></i> Thank you for supporting flood-affected families!
+                        </div>
+                    </div>
+                    
+                    <div class="order-summary-total">
+                        <span>Total:</span>
+                        <span id="checkout-total">$0.00</span>
+                    </div>
+                    <div class="disclaimer">
+                        <p><small>Free shipping on orders over $50. Taxes included where applicable.</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- CART SIDEBAR -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3 class="cart-title">Your Cart</h3>
+            <button class="close-cart" id="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- cart items inserted here -->
+        </div>
+        <div class="cart-footer">
+            <!-- CART DONATION -->
+            <div class="cart-donation" id="cart-donation">
+                <div class="cart-donation-title">
+                    <i class="fas fa-hands-helping"></i>
+                    Flood Relief Donation
+                </div>
+                <div>10% of your purchase will be donated to help flood victims</div>
+                <div class="cart-donation-amount" id="cart-donation-amount">$0.00</div>
+            </div>
+            
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="sidebar-checkout-btn">
+                <i class="fas fa-shopping-bag"></i> Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- OVERLAY -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- TOAST CONTAINER -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Imperio</h3>
+                    <p>Your premier destination for the latest electronics and tech gadgets.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showPage('home')">Home</a></li>
+                        <li><a href="#" onclick="showPage('products')">Products</a></li>
+                        <li><a href="#" onclick="showPage('categories')">Categories</a></li>
+                        <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                        <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                    </ul>
+                </div>
+
+
+
+
+
+
+
+
+
+                
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#" onclick="showPage('contact')">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 113/A, Wiskam Road, Galle</li>
+                        <li><i class="fas fa-phone"></i> +94 74 135 4458</li>
+                        <li><i class="fas fa-envelope"></i> sandanindu@gmail.com</li>
+                        <li><i class="fas fa-hands-helping"></i> 10% to Flood Relief</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9AM-6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Imperio. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--danger);"></i> by Sandanindu Batheegama</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--gray-400);">
+                    <i class="fas fa-hands-helping"></i> 
+                    <strong>Standing with Sri Lanka:</strong> 10% of all purchases donated to flood relief efforts
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
